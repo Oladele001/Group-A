@@ -42,7 +42,7 @@ export default function Header() {
               href="/" 
               className="relative px-6 py-3 rounded-2xl text-sm font-bold transition-all duration-300 hover:bg-blue-700 hover:text-white hover:scale-105 font-jakarta text-white group shadow-sm hover:shadow-md"
             >
-              <span className="relative z-10">Home</span>
+              <span className="relative z-10 text-white">Home</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-blue-600/0 rounded-2xl transition-all duration-300 group-hover:from-blue-500/20 group-hover:to-blue-600/20"></div>
             </Link>
             <Link 

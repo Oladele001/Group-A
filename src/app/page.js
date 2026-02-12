@@ -41,7 +41,7 @@ export default function Home() {
                   href="/contact"
                   className="gradient-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta btn-primary"
                 >
-                  Book Appointment
+                   Book Appointment
                 </Link>
                 <Link 
                   href="tel:+234 9035157889"
@@ -56,18 +56,18 @@ export default function Home() {
             <div className="relative animate-fadeInRight">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl card-hover">
                 <Image
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=90"
                   alt="Group A Hospital Founder"
-                  width={800}
-                  height={500}
+                  width={1000}
+                  height={750}
                   className="w-full h-auto object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
-                  <div className="bg-blue-600/90 backdrop-blur-sm px-6 py-3 rounded-xl">
-                    <p className="text-lg font-semibold">Dr. SODIQ O</p>
-                    <p className="text-sm opacity-90">Founder & Medical Director</p>
+                  <div className="bg-blue-600/90 backdrop-blur-sm px-8 py-4 rounded-xl">
+                    <p className="text-xl font-bold">Dr. SODIQ O</p>
+                    <p className="text-base opacity-90">Founder & Medical Director</p>
                   </div>
                 </div>
               </div>

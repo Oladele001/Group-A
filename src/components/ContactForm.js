@@ -24,8 +24,20 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would normally send the data to your backend
-    console.log('Form submitted:', formData);
+    
+    // Create WhatsApp message with all form data
+    const whatsappMessage = `*New Appointment Request - Group A Hospital*%0A%0A*Patient Information:*%0A📝 Name: ${formData.name}%0A📞 Phone: ${formData.phone}%0A📧 Email: ${formData.email}%0A🏥 Department: ${formData.department}%0A📅 Preferred Date: ${formData.date}%0A💬 Message: ${formData.message || 'No additional message'}%0A%0A*Please contact me to confirm my appointment.*%0A%0AThank you!`;
+    
+    // WhatsApp phone number (replace with your actual WhatsApp number)
+    const whatsappNumber = '+2349035157889';
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
     setIsSubmitted(true);
     
     // Reset form after 3 seconds
@@ -89,8 +101,8 @@ export default function ContactForm() {
                   <svg className="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-xl font-semibold text-green-300 mb-2">Appointment Request Received!</h3>
-                  <p className="text-green-400">We'll contact you within 24 hours to confirm your appointment.</p>
+                  <h3 className="text-xl font-semibold text-green-300 mb-2">Opening WhatsApp...</h3>
+                  <p className="text-green-400">Your appointment details have been sent to Group A Hospital via WhatsApp!</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -203,9 +215,13 @@ export default function ContactForm() {
 
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+                    className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center space-x-2"
                   >
-                    Book Appointment
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.065 2.876c1.396 2.391 2.874 2.392 3.52 2.391.647 0 1.906-.447 2.374-.874.467-.427.603-.966.603-1.164 0-.198-.075-.447-.225-.596z"/>
+                      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                    </svg>
+                    <span>Book Appointment via WhatsApp</span>
                   </button>
                 </form>
               )}
