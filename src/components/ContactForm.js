@@ -45,13 +45,13 @@ export default function ContactForm() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-20">
+      <section className="bg-gradient-to-br from-gray-900 to-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get in touch with Group A Hospital for appointments, inquiries, or emergency care
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function ContactForm() {
                 href="tel:+2348000000000"
                 className="text-white text-2xl font-bold hover:text-yellow-300 transition-colors"
               >
-                +234 800-000-0000
+                +234 9035157889
               </a>
               <span className="text-white">Available 24/7</span>
             </div>
@@ -77,26 +77,26 @@ export default function ContactForm() {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Book an Appointment</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">Book an Appointment</h2>
               
               {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                  <svg className="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-green-900 border border-green-700 rounded-lg p-6 text-center">
+                  <svg className="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-xl font-semibold text-green-800 mb-2">Appointment Request Received!</h3>
-                  <p className="text-green-600">We'll contact you within 24 hours to confirm your appointment.</p>
+                  <h3 className="text-xl font-semibold text-green-300 mb-2">Appointment Request Received!</h3>
+                  <p className="text-green-400">We'll contact you within 24 hours to confirm your appointment.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
                       <input
@@ -106,13 +106,13 @@ export default function ContactForm() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-400"
                         placeholder="John Doe"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                       </label>
                       <input
@@ -122,7 +122,7 @@ export default function ContactForm() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-400"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -130,7 +130,7 @@ export default function ContactForm() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -140,13 +140,13 @@ export default function ContactForm() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-400"
                         placeholder="+234 800-000-0000"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="department" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="department" className="block text-sm font-medium text-gray-300 mb-2">
                         Department *
                       </label>
                       <select
@@ -155,7 +155,7 @@ export default function ContactForm() {
                         required
                         value={formData.department}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white"
                       >
                         <option value="">Select Department</option>
                         <option value="emergency">Emergency Care</option>
@@ -171,7 +171,7 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="date" className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Date *
                     </label>
                     <input
@@ -181,13 +181,13 @@ export default function ContactForm() {
                       required
                       value={formData.date}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white"
                       min={new Date().toISOString().split('T')[0]}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Additional Information
                     </label>
                     <textarea
@@ -196,7 +196,7 @@ export default function ContactForm() {
                       rows="4"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-white placeholder-gray-400"
                       placeholder="Please describe your symptoms or reason for visit..."
                     ></textarea>
                   </div>
@@ -213,9 +213,9 @@ export default function ContactForm() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
               
-              <div className="bg-blue-50 p-8 rounded-2xl mb-8">
+              <div className="bg-gray-900 p-8 rounded-2xl mb-8 border border-gray-700">
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -225,10 +225,10 @@ export default function ContactForm() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Hospital Address</h3>
-                      <p className="text-gray-600">Group A Hospital</p>
-                      <p className="text-gray-600">Main Road, Apomu</p>
-                      <p className="text-gray-600">Osun State, Nigeria</p>
+                      <h3 className="text-lg font-semibold text-white">Hospital Address</h3>
+                      <p className="text-gray-300">Group A Hospital</p>
+                      <p className="text-gray-300">Awala Road, Apomu</p>
+                      <p className="text-gray-300">Osun State, Nigeria</p>
                     </div>
                   </div>
 
@@ -239,23 +239,23 @@ export default function ContactForm() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Phone Numbers</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-lg font-semibold text-white">Phone Numbers</h3>
+                      <p className="text-gray-300">
                         <span className="font-semibold">Emergency:</span>{" "}
-                        <a href="tel:+2348000000000" className="text-red-600 hover:text-red-700 font-bold">
-                          +234 800-000-0000
+                        <a href="tel:+2349035157889" className="text-red-400 hover:text-red-300 font-bold">
+                          +234 9035157889
                         </a>
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">General:</span>{" "}
-                        <a href="tel:+2348000000001" className="text-blue-600 hover:text-blue-700">
-                          +234 800-000-0001
+                        <a href="tel:+2349035157889" className="text-blue-400 hover:text-blue-300">
+                          +2349035157889
                         </a>
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Appointments:</span>{" "}
-                        <a href="tel:+2348000000002" className="text-blue-600 hover:text-blue-700">
-                          +234 800-000-0002
+                        <a href="tel:+2349035157889" className="text-blue-400 hover:text-blue-300">
+                          +2349035157889
                         </a>
                       </p>
                     </div>
@@ -268,22 +268,22 @@ export default function ContactForm() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Email Addresses</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-lg font-semibold text-white">Email Addresses</h3>
+                      <p className="text-gray-300">
                         <span className="font-semibold">General Inquiries:</span>{" "}
-                        <a href="mailto:info@groupahospital.com" className="text-blue-600 hover:text-blue-700">
+                        <a href="mailto:info@groupahospital.com" className="text-blue-400 hover:text-blue-300">
                           info@groupahospital.com
                         </a>
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Appointments:</span>{" "}
-                        <a href="mailto:appointments@groupahospital.com" className="text-blue-600 hover:text-blue-700">
+                        <a href="mailto:appointments@groupahospital.com" className="text-blue-400 hover:text-blue-300">
                           appointments@groupahospital.com
                         </a>
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Emergency:</span>{" "}
-                        <a href="mailto:emergency@groupahospital.com" className="text-red-600 hover:text-red-700">
+                        <a href="mailto:emergency@groupahospital.com" className="text-red-400 hover:text-red-300">
                           emergency@groupahospital.com
                         </a>
                       </p>
@@ -297,17 +297,17 @@ export default function ContactForm() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Working Hours</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-lg font-semibold text-white">Working Hours</h3>
+                      <p className="text-gray-300">
                         <span className="font-semibold">Emergency Services:</span> 24/7
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Outpatient:</span> Monday - Friday, 8:00 AM - 6:00 PM
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Weekend:</span> Saturday, 9:00 AM - 2:00 PM
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Sunday:</span> Emergency Only
                       </p>
                     </div>
@@ -316,8 +316,8 @@ export default function ContactForm() {
               </div>
 
               {/* Social Media Links */}
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <div className="bg-gray-900 p-6 rounded-xl border border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a 
                     href="#" 
@@ -354,70 +354,30 @@ export default function ContactForm() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Find Us Easily
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Located conveniently in the heart of Apomu, Osun State
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Located conveniently in heart of Apomu, Osun State
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div className="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-700">
             <GoogleMap address="Apomu, Osun State, Nigeria" height="500px" />
           </div>
 
           <div className="mt-8 text-center">
-            <div className="bg-blue-50 p-6 rounded-xl inline-block">
-              <p className="text-gray-700 mb-2">
+            <div className="bg-gray-900 p-6 rounded-xl inline-block border border-gray-700">
+              <p className="text-gray-300 mb-2">
                 <span className="font-semibold">Getting Here:</span> We are easily accessible by public transport and have ample parking space for private vehicles.
               </p>
-              <p className="text-gray-700">
-                <span className="font-semibold">Landmark:</span> Located near the Apomu Central Market, just 2km from the main highway.
+              <p className="text-gray-300">
+                <span className="font-semibold">Landmark:</span> Located near Apomu Central Market, just 2km from main highway.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Quick answers to common questions about our services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                question: "Do I need an appointment for emergency care?",
-                answer: "No, our emergency department is open 24/7 and accepts walk-in patients without appointments."
-              },
-              {
-                question: "What insurance plans do you accept?",
-                answer: "We accept NHIS, private insurance plans, and corporate health packages. Please contact us for specific plan details."
-              },
-              {
-                question: "How can I get my medical records?",
-                answer: "You can request your medical records by visiting our hospital with valid identification or by emailing us at info@groupahospital.com."
-              },
-              {
-                question: "Do you have parking facilities?",
-                answer: "Yes, we have ample parking space for patients and visitors, including dedicated spots for emergency cases."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

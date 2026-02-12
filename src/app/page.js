@@ -23,7 +23,7 @@ export default function Home() {
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  Since 1985
+                  Since 2010
                 </span>
               </div>
               
@@ -44,10 +44,10 @@ export default function Home() {
                   Book Appointment
                 </Link>
                 <Link 
-                  href="tel:+2348000000000"
+                  href="tel:+234 9035157889"
                   className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta"
                 >
-                  Emergency: +234 800-000-0000
+                  Emergency: +234 9035157889
                 </Link>
               </div>
             </div>
@@ -56,18 +56,18 @@ export default function Home() {
             <div className="relative animate-fadeInRight">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl card-hover">
                 <Image
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
                   alt="Group A Hospital Founder"
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={500}
                   className="w-full h-auto object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
-                  <div className="bg-blue-600/90 backdrop-blur-sm px-4 py-2 rounded-xl">
-                    <p className="text-sm font-semibold">Dr. Adebayo Johnson</p>
-                    <p className="text-xs opacity-90">Founder & Medical Director</p>
+                  <div className="bg-blue-600/90 backdrop-blur-sm px-6 py-3 rounded-xl">
+                    <p className="text-lg font-semibold">Dr. SODIQ O</p>
+                    <p className="text-sm opacity-90">Founder & Medical Director</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function Home() {
                     </svg>
                     <div>
                       <p className="font-semibold text-white">Phone</p>
-                      <p className="text-gray-300">+234 800-000-0000</p>
+                      <p className="text-gray-300">+234 9035157889</p>
                     </div>
                   </div>
 
