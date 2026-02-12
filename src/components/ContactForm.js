@@ -26,7 +26,7 @@ export default function ContactForm() {
     e.preventDefault();
     
     // Create WhatsApp message with all form data
-    const whatsappMessage = `*New Appointment Request - Group A Hospital*%0A%0A*Patient Information:*%0A📝 Name: ${formData.name}%0A📞 Phone: ${formData.phone}%0A📧 Email: ${formData.email}%0A🏥 Department: ${formData.department}%0A📅 Preferred Date: ${formData.date}%0A💬 Message: ${formData.message || 'No additional message'}%0A%0A*Please contact me to confirm my appointment.*%0A%0AThank you!`;
+    const whatsappMessage = `*New Appointment Request - Group A Hospital Patient Information:  Name: ${formData.name} ,  Phone: ${formData.phone} , Email: ${formData.email} , Department: ${formData.department} , Preferred Date: ${formData.date} , Message: ${formData.message || 'No additional message'} , *Please contact me to confirm my appointment. AThank you!`;
     
     // WhatsApp phone number (replace with your actual WhatsApp number)
     const whatsappNumber = '+2349035157889';
@@ -77,7 +77,7 @@ export default function ContactForm() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <span className="text-white font-bold text-lg">🚨 Emergency Hotline:</span>
               <a 
-                href="tel:+2348000000000"
+                href="tel:+2349035157889"
                 className="text-white text-2xl font-bold hover:text-yellow-300 transition-colors"
               >
                 +234 9035157889

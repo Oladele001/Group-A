@@ -39,7 +39,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link 
                   href="/contact"
-                  className="gradient-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta btn-primary"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta btn-primary"
                 >
                    Book Appointment
                 </Link>
@@ -47,7 +47,7 @@ export default function Home() {
                   href="tel:+234 9035157889"
                   className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta"
                 >
-                  Emergency: +234 9035157889
+                  Emergency: <span className="text-white">+234 9035157889</span>
                 </Link>
               </div>
             </div>
@@ -91,11 +91,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Feature 1 */}
             <div className="group">
-              <div className="bg-white p-8 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 card-hover border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover border border-blue-200 dark:from-blue-900/20 dark:to-blue-800/20 dark:border-blue-700 transform hover:scale-105">
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=90"
+                    alt="24/7 Emergency Care"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 font-jakarta dark:text-white">24/7 Emergency Care</h3>
                 <p className="text-gray-600 leading-relaxed dark:text-gray-300">
@@ -106,11 +111,16 @@ export default function Home() {
 
             {/* Feature 2 */}
             <div className="group">
-              <div className="bg-white p-8 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 card-hover border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                <div className="bg-gradient-to-br from-green-500 to-green-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 007 7z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover border border-green-200 dark:from-green-900/20 dark:to-green-800/20 dark:border-green-700 transform hover:scale-105">
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=90"
+                    alt="Expert Medical Team"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-600/30 to-transparent"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 font-jakarta dark:text-white">Expert Medical Team</h3>
                 <p className="text-gray-600 leading-relaxed dark:text-gray-300">
@@ -121,11 +131,16 @@ export default function Home() {
 
             {/* Feature 3 */}
             <div className="group">
-              <div className="bg-white p-8 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 card-hover border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h14M9 21h6a2 2 0 002-2v-1a2 2 0 00-2-2H5a2 2 0 00-2 2v3a2 2 0 002 2z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover border border-purple-200 dark:from-purple-900/20 dark:to-purple-800/20 dark:border-purple-700 transform hover:scale-105">
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=90"
+                    alt="Modern Facilities"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 to-transparent"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 font-jakarta dark:text-white">Modern Facilities</h3>
                 <p className="text-gray-600 leading-relaxed dark:text-gray-300">
@@ -136,11 +151,16 @@ export default function Home() {
 
             {/* Feature 4 */}
             <div className="group">
-              <div className="bg-white p-8 rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 card-hover border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0L3.82 7.682a4.5 4.5 0 000 6.364L12 20.364z" />
-                  </svg>
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 card-hover border border-orange-200 dark:from-orange-900/20 dark:to-orange-800/20 dark:border-orange-700 transform hover:scale-105">
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
+                  <Image
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=90"
+                    alt="Patient-Centered Care"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-600/30 to-transparent"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 font-jakarta dark:text-white">Patient-Centered Care</h3>
                 <p className="text-gray-600 leading-relaxed dark:text-gray-300">
