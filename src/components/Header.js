@@ -5,82 +5,74 @@ import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Add scroll effect
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
   return (
-    <header className="bg-white/95 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-gray-100 dark:bg-gray-900/95 dark:border-gray-800">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-100/50' : 'bg-transparent'} dark:bg-gray-900/95 dark:border-gray-800/50`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link 
               href="/" 
-              className="flex items-center space-x-3 text-2xl font-extrabold gradient-text font-jakarta"
+              className="flex items-center space-x-3 text-2xl font-extrabold gradient-text font-jakarta group"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
-                GA
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white font-bold shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                  <path fill="white" d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                </svg>
               </div>
-              <span className="hidden sm:block">Group A Hospital</span>
+              <span className="hidden sm:block bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent font-bold">Group A Hospital</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-2">
             <Link 
               href="/" 
-              className="text-gray-700 hover:text-blue-600 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-blue-50 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+              className="relative px-5 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-600 hover:scale-105 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20 group"
             >
-              Home
+              <span className="relative z-10">Home</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-blue-600/0 rounded-2xl transition-all duration-300 group-hover:from-blue-500/10 group-hover:to-blue-600/10"></div>
             </Link>
             <Link 
               href="/about" 
-              className="text-gray-700 hover:text-blue-600 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-blue-50 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+              className="relative px-5 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-600 hover:scale-105 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20 group"
             >
-              About
+              <span className="relative z-10">About</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-blue-600/0 rounded-2xl transition-all duration-300 group-hover:from-blue-500/10 group-hover:to-blue-600/10"></div>
             </Link>
             <Link 
               href="/services" 
-              className="text-gray-700 hover:text-blue-600 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-blue-50 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+              className="relative px-5 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-600 hover:scale-105 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20 group"
             >
-              Services
+              <span className="relative z-10">Services</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-blue-600/0 rounded-2xl transition-all duration-300 group-hover:from-blue-500/10 group-hover:to-blue-600/10"></div>
             </Link>
             <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 font-jakarta btn-primary"
+              className="relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white rounded-2xl text-sm font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 font-jakarta shadow-lg group"
             >
-              Book Appointment
+              <span className="relative z-10">Book Appointment</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 to-white/0 rounded-2xl transition-all duration-300 group-hover:from-white/20 group-hover:to-white/30"></div>
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-3 rounded-xl text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+              className="relative p-3 rounded-2xl text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -91,56 +83,36 @@ export default function Header() {
               </svg>
             </button>
           </div>
-
-          {/* Theme Toggle - Bottom Right Corner */}
-          <div className="absolute bottom-4 right-4 z-10">
-            <button
-              onClick={toggleTheme}
-              className="p-3 rounded-full bg-white shadow-lg border border-gray-200 text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover:shadow-xl hover:scale-110 transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-400 dark:hover:bg-gray-700"
-              aria-label="Toggle theme"
-              title="Toggle dark/light mode"
-            >
-              {isDarkMode ? (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
-            </button>
-          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 shadow-xl dark:bg-gray-900 dark:border-gray-800">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-gray-200 shadow-2xl dark:bg-gray-900/98 dark:border-gray-800">
+            <div className="px-2 pt-4 pb-6 space-y-2">
               <Link 
                 href="/" 
-                className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+                className="block px-4 py-3 rounded-2xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 transition-all duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+                className="block px-4 py-3 rounded-2xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 transition-all duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
-                className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-blue-900/20"
+                className="block px-4 py-3 rounded-2xl text-base font-semibold text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 transition-all duration-300 font-jakarta dark:text-gray-300 dark:hover:text-blue-400 dark:hover:from-blue-900/20 dark:hover:to-blue-800/20"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
               <Link 
                 href="/contact" 
-                className="block w-full mt-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl text-base font-semibold transition-all duration-300 hover:shadow-lg text-center font-jakarta btn-primary"
+                className="block w-full mt-4 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-2xl text-base font-semibold transition-all duration-300 hover:shadow-xl text-center font-jakarta shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Book Appointment

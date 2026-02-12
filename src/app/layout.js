@@ -25,10 +25,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable} font-sans`}>
       <body
-        className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100`}
+        className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col transition-colors duration-300`}
       >
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50 -z-10"></div>
+        <div className="fixed inset-0 -z-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{animationDelay: '4s'}}></div>
+        </div>
+        
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow relative z-10">
           {children}
         </main>
         <Footer />
