@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-jakarta dark:text-white">
@@ -153,13 +153,13 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive medical services to meet all your healthcare needs.
             </p>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
               { name: "Diagnostics", icon: "🔬", description: "Advanced diagnostic imaging" },
               { name: "Pharmacy", icon: "💊", description: "Complete pharmaceutical services" }
             ].map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-700">
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.name}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -196,30 +196,30 @@ export default function Home() {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Visit Us Today
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Conveniently located in the heart of Apomu, Osun State
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="bg-blue-50 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Hospital Address</h3>
+              <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-6">Hospital Address</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <svg className="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-gray-900">Group A Hospital</p>
-                      <p className="text-gray-600">Main Road, Apomu</p>
-                      <p className="text-gray-600">Osun State, Nigeria</p>
+                      <p className="font-semibold text-white">Group A Hospital</p>
+                      <p className="text-gray-300">Awala Road, Apomu</p>
+                      <p className="text-gray-300">Osun State, Nigeria</p>
                     </div>
                   </div>
 
@@ -228,8 +228,8 @@ export default function Home() {
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
-                      <p className="text-gray-600">+234 800-000-0000</p>
+                      <p className="font-semibold text-white">Phone</p>
+                      <p className="text-gray-300">+234 800-000-0000</p>
                     </div>
                   </div>
 
@@ -239,8 +239,8 @@ export default function Home() {
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <p className="text-gray-600">info@groupahospital.com</p>
+                      <p className="font-semibold text-white">Email</p>
+                      <p className="text-gray-300">info@groupahospital.com</p>
                     </div>
                   </div>
 
@@ -249,9 +249,9 @@ export default function Home() {
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-gray-900">Working Hours</p>
-                      <p className="text-gray-600">24/7 Emergency Services</p>
-                      <p className="text-gray-600">Outpatient: 8:00 AM - 6:00 PM</p>
+                      <p className="font-semibold text-white">Working Hours</p>
+                      <p className="text-gray-300">24/7 Emergency Services</p>
+                      <p className="text-gray-300">Outpatient: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>
                 </div>
