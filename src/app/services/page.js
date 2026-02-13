@@ -11,34 +11,54 @@ export default function Services() {
     {
       id: 1,
       name: "Emergency Care",
-      icon: "🚑",
+      icon: (
+        <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3a1 1 0 011-2h3a1 1 0 011 2v3a1 1 0 002 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
       description: "24/7 emergency medical services with trained professionals ready to handle any medical emergency.",
       features: ["24/7 Availability", "Trauma Care", "Critical Care Unit", "Ambulance Services"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 2,
       name: "General Surgery",
-      icon: "⚕️",
+      icon: (
+        <svg className="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.5 2.5a2.5 2.5 0 00-5 0v14a2 2 0 002 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.5 7.5v-5a2.5 2.5 0 00-5 0v14a2 2 0 002 2 0 014 0z" />
+        </svg>
+      ),
       description: "Advanced surgical procedures performed by experienced surgeons using modern equipment and techniques.",
       features: ["Minimally Invasive Surgery", "Laparoscopic Procedures", "Outpatient Surgery", "Post-operative Care"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 3,
       name: "Pediatrics",
-      icon: "👶",
+      icon: (
+        <svg className="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 007 7z" />
+        </svg>
+      ),
       description: "Specialized healthcare services for infants, children, and adolescents with a child-friendly environment.",
       features: ["Newborn Care", "Vaccination Programs", "Growth Monitoring", "Pediatric Emergency Care"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 4,
       name: "Maternity Services",
-      icon: "🤱",
+      icon: (
+        <svg className="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
       description: "Complete maternal healthcare including prenatal, delivery, and postnatal care in a comfortable setting.",
       features: ["Prenatal Care", "Labor & Delivery", "C-Section Services", "Postnatal Care", "Lactation Support"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 5,
@@ -46,7 +66,7 @@ export default function Services() {
       icon: "🔬",
       description: "State-of-the-art diagnostic imaging and laboratory services for accurate and timely diagnosis.",
       features: ["X-Ray & CT Scan", "Ultrasound", "MRI Services", "Laboratory Tests", "Pathology Services"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 6,
@@ -54,7 +74,7 @@ export default function Services() {
       icon: "💊",
       description: "Complete pharmaceutical services with genuine medications and professional pharmaceutical care.",
       features: ["Prescription Drugs", "Over-the-Counter Medicines", "Medication Counseling", "24/7 Service"],
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 7,
@@ -62,15 +82,19 @@ export default function Services() {
       icon: "❤️",
       description: "Comprehensive heart care services including diagnosis, treatment, and prevention of cardiovascular diseases.",
       features: ["Echocardiography", "Stress Testing", "Cardiac Catheterization", "Heart Disease Management"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     },
     {
       id: 8,
       name: "Orthopedics",
-      icon: "🦴",
+      icon: (
+        <svg className="w-6 h-6 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2a3 3 0 015.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
       description: "Specialized care for bone, joint, and muscle conditions with advanced treatment options.",
       features: ["Joint Replacement", "Fracture Care", "Sports Medicine", "Physical Therapy"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      image: "https://i.pinimg.com/564x/8f/3e/8f3e3c7e1f435b7ed8a7faa6ba29.jpg"
     }
   ];
 
@@ -96,21 +120,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service) => (
               <div key={service.id} className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-700">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.name}
-                    width={600}
-                    height={300}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-gray-800 rounded-full p-3">
-                    <span className="text-2xl">{service.icon}</span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
+                <div className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   

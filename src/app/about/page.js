@@ -1,12 +1,44 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = {
-  title: "About Us - Group A Hospital",
-  description: "Learn about Group A Hospital's history, mission, and our commitment to providing quality healthcare in Apomu, Osun State.",
-};
+import { useState } from "react";
 
 export default function About() {
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleBookAppointment = () => {
+    // WhatsApp message with appointment details
+    const whatsappMessage = `🏥 *Group A Hospital - Appointment Request* 🏥
+
+👤 *Name:* [Your Name]
+📞 *Phone:* [Your Phone Number]
+📅 *Preferred Date:* [Preferred Date]
+⏰ *Preferred Time:* [Preferred Time]
+🏥 *Service Needed:* [Medical Service/Department]
+
+📍 *Hospital Location:* Awala Road, Apomu, Osun State, Nigeria
+📞 *Emergency:* +234 9035157889
+
+✅ *Thank you for choosing Group A Hospital!*
+📝 *Our team will contact you shortly to confirm your appointment.*
+
+_Group A Hospital - Your Health, Our Priority_`;
+
+    const whatsappNumber = '+2349035157889';
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Show thank you popup
+    setShowThankYou(true);
+    
+    // Hide popup after 5 seconds
+    setTimeout(() => {
+      setShowThankYou(false);
+    }, 5000);
+  };
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -207,12 +239,12 @@ export default function About() {
             Join thousands of satisfied patients who trust Group A Hospital for their medical needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <button 
+              onClick={handleBookAppointment}
               className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
             >
               Book Appointment
-            </Link>
+            </button>
             <Link 
               href="/services"
               className="bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border border-gray-700"
@@ -222,6 +254,28 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Thank You Popup */}
+      {showThankYou && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl p-8 max-w-md mx-4 shadow-2xl transform transition-all duration-300 scale-100">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+              <p className="text-gray-600 mb-4">
+                Your appointment request has been sent to WhatsApp. Our team will contact you shortly to confirm your appointment.
+              </p>
+              <div className="text-sm text-gray-500">
+                WhatsApp will open in a new window with your pre-filled message.
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
