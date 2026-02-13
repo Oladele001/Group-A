@@ -17,8 +17,29 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata = {
   title: "Group A Hospital - Quality Healthcare for All",
-  description: "Group A Hospital in Apomu, Osun State provides quality healthcare services with modern facilities and experienced medical professionals.",
-  keywords: "hospital, healthcare, Apomu, Osun State, medical services, emergency care",
+  description: "Group A Hospital in Apomu, Osun State provides quality healthcare services with modern facilities and experienced medical professionals. Emergency care, surgery, pediatrics, maternity, diagnostics, pharmacy, cardiology, and orthopedics.",
+  keywords: "hospital, healthcare, Apomu, Osun State, medical services, emergency care, surgery, pediatrics, maternity, diagnostics, pharmacy, cardiology, orthopedics, Nigeria healthcare",
+  authors: [{ name: "Group A Hospital" }],
+  openGraph: {
+    title: "Group A Hospital - Quality Healthcare in Apomu",
+    description: "Group A Hospital provides comprehensive healthcare services including emergency care, surgery, pediatrics, maternity, diagnostics, pharmacy, cardiology, and orthopedics in Apomu, Osun State, Nigeria.",
+    url: "https://group-a-hospital.vercel.app",
+    siteName: "Group A Hospital",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@groupahospital",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: true,
+  },
+  verification: {
+    google: "your-verification-code-here",
+  },
 };
 
 export default function RootLayout({ children }) {

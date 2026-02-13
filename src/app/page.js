@@ -1,8 +1,87 @@
+'use client';
+
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import Link from "next/link";
-import GoogleMap from "@/components/GoogleMap";
+import { useEffect } from 'react';
+
+const DynamicGoogleMap = dynamic(() => import('@/components/DynamicGoogleMap'), {
+  loading: () => <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">Loading Map...</div>,
+  ssr: false
+});
 
 export default function Home() {
+  useEffect(() => {
+    // Add structured data to document head
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Hospital",
+      "name": "Group A Hospital",
+      "description": "Group A Hospital in Apomu, Osun State provides quality healthcare services with modern facilities and experienced medical professionals. Emergency care, surgery, pediatrics, maternity, diagnostics, pharmacy, cardiology, and orthopedics.",
+      "url": "https://group-a-hospital.vercel.app",
+      "telephone": "+2349035157889",
+      "email": "info@groupahospital.com",
+      "address": {
+        "streetAddress": "Awala Road, Apomu",
+        "addressLocality": "Apomu",
+        "addressRegion": "Osun State",
+        "addressCountry": "Nigeria"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+      "department": [
+        {
+          "name": "Emergency Care",
+          "description": "24/7 emergency medical services with trained professionals"
+        },
+        {
+          "name": "General Surgery",
+          "description": "Advanced surgical procedures performed by experienced surgeons"
+        },
+        {
+          "name": "Pediatrics",
+          "description": "Specialized healthcare services for infants, children, and adolescents"
+        },
+        {
+          "name": "Maternity Services",
+          "description": "Complete maternal healthcare including prenatal, delivery, and postnatal care"
+        },
+        {
+          "name": "Diagnostic Services",
+          "description": "State-of-the-art diagnostic imaging and laboratory services"
+        },
+        {
+          "name": "Pharmacy Services",
+          "description": "Complete pharmaceutical services with genuine medications"
+        },
+        {
+          "name": "Cardiology",
+          "description": "Comprehensive heart care services including diagnosis and treatment"
+        },
+        {
+          "name": "Orthopedics",
+          "description": "Specialized care for bone, joint, and muscle conditions"
+        }
+      ],
+      "priceRange": "$",
+      "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+      "sameAs": [
+        "https://www.facebook.com/groupahospital",
+        "https://www.twitter.com/groupahospital"
+      ]
+    };
+
+    // Create or update script tag
+    let script = document.querySelector('script[type="application/ld+json"]');
+    if (script) {
+      script.textContent = JSON.stringify(structuredData);
+    } else {
+      script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -61,7 +140,8 @@ export default function Home() {
                   width={1000}
                   height={450}
                   className="w-full h-[450] object-cover"
-                  priority
+                  // loading="lazy"
+                  // sizes="(max-width: 1000px) 100vw, (max-width: 768px) 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
@@ -259,7 +339,7 @@ export default function Home() {
             </div>
 
             <div>
-              <GoogleMap address="Apomu, Osun State, Nigeria" height="400px" />
+              <DynamicGoogleMap address="Awala Road, Apomu, Osun State, Nigeria" height="500px" />
             </div>
           </div>
         </div>

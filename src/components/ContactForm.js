@@ -26,7 +26,7 @@ export default function ContactForm() {
     e.preventDefault();
     
     // Create WhatsApp message with all form data
-    const whatsappMessage = `New Appointment Request - Group A Hospital Patient Information:  Name: ${formData.name} ,  Phone: ${formData.phone} , Email: ${formData.email} , Department: ${formData.department} , Preferred Date: ${formData.date} , Message: ${formData.message || 'No additional message'} , Please contact me to confirm my appointment. Thank you!`;
+    const whatsappMessage = `New Appointment Request Group A Hospital , Patient Information:  Name: ${formData.name} ,  Phone: ${formData.phone} , Email: ${formData.email} , Department: ${formData.department} , Preferred Date: ${formData.date} , Message: ${formData.message || 'No additional message'} , Please contact me to confirm my appointment. Thank you!`;
     
     // WhatsApp phone number (replace with your actual WhatsApp number)
     const whatsappNumber = '+2349035157889';
