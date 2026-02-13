@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900 mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -50,96 +50,12 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-200 mb-4">Our Vision</h2>
+              <p className="text-gray-300 leading-relaxed">
                 To be the leading healthcare institution in Osun State, recognized for excellence in medical care, 
                 innovation in treatment approaches, and unwavering commitment to community health. We aspire to create 
                 a healthier future where quality healthcare is a right, not a privilege.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* History Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our History
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to a beacon of hope in healthcare
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">1995 - The Beginning</h3>
-                    <p className="text-gray-600">
-                      Group A Hospital was founded with a simple mission: to bring quality healthcare to the people of Apomu. 
-                      Starting with just a small clinic and a handful of dedicated medical professionals.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">2005 - Expansion</h3>
-                    <p className="text-gray-600">
-                      A decade of service saw us expand our facilities, add new departments, and introduce advanced medical 
-                      equipment to better serve our growing community.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">2015 - Modernization</h3>
-                    <p className="text-gray-600">
-                      Major renovations and technological upgrades transformed us into a modern healthcare facility, 
-                      capable of handling complex medical cases and procedures.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Present - Excellence</h3>
-                    <p className="text-gray-600">
-                      Today, we stand as a premier healthcare institution, serving thousands of patients annually with 
-                      compassion, excellence, and unwavering dedication to health and wellness.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Group A Hospital Building"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -247,11 +163,11 @@ export default function About() {
                 <div className="mt-6 pt-6 border-t border-gray-700">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <p className="text-3xl font-bold text-blue-400">30+</p>
+                      <p className="text-3xl font-bold text-blue-400">10+</p>
                       <p className="text-gray-300">Years Experience</p>
                     </div>
                     <div>
-                      <p className="text-3xl font-bold text-blue-400">50K+</p>
+                      <p className="text-3xl font-bold text-blue-400">10K+</p>
                       <p className="text-gray-300">Lives Touched</p>
                     </div>
                   </div>
@@ -262,11 +178,11 @@ export default function About() {
             <div className="order-1 lg:order-2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
                 <Image
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/doctor.jpeg"
                   alt="Dr. SODIQ O"
                   width={600}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  height={450}
+                  className="w-full h-[450] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
