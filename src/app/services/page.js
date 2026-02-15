@@ -101,10 +101,10 @@ export default function Services() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-400 mb-6">
               Our Medical Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ export default function Services() {
             {services.map((service) => (
               <div key={service.id} className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-700">
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
+                  <h3 className="text-2xl font-bold text-blue-400 mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   
                   <div className="mb-4">
@@ -213,10 +213,10 @@ export default function Services() {
               Book Appointment
             </Link>
             <Link 
-              href="tel:+2348000000000"
+              href="tel:+234 9035157889"
               className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
             >
-              Emergency: +234 800-000-0000
+              Emergency: +234 9035157889
             </Link>
           </div>
         </div>

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gray-900 mt-6">
+      <section className="py-20 bg-gray-900 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -175,7 +175,7 @@ export default function About() {
             <div className="order-1 lg:order-2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
                 <Image
-                  src="/doctor.jpeg"
+                  src="/doctor02.jpeg"
                   alt="Dr. SODIQ O"
                   width={600}
                   height={450}
@@ -206,13 +206,13 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-400 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
             >
               Book Appointment
             </Link>
             <Link 
               href="/services"
-              className="bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border border-gray-700"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border border-gray-700"
             >
               View Our Services
             </Link>

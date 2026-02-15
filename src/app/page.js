@@ -102,7 +102,7 @@ export default function Home() {
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                  Since 2010
+                  Since 2016
                 </span>
               </div>
               
@@ -133,9 +133,9 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="relative animate-fadeInRight">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl card-hover">
+              <div className="relative rounded-3xl  shadow-2xl card-hover">
                 <Image
-                  src="/doctor.jpeg"
+                  src="/doctor01.jpeg"
                   alt="Group A Hospital Founder"
                   width={1000}
                   height={450}
