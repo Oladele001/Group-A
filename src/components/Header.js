@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from "next/image";
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -27,10 +28,13 @@ export default function Header() {
               className="flex items-center space-x-3 text-2xl font-extrabold text-white font-jakarta group"
             >
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white font-bold shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                  <path fill="white" d="M10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
-                </svg>
+                 <Image
+                  src="/logo.jpeg"
+                  alt="Group A Hospital Founder"
+                  width={35}
+                  height={35}
+                  className="w-[35] h-[35] object-contain rounded-xl"
+                  />
               </div>
               <span className="hidden sm:block text-white font-bold">Group A Hospital</span>
             </Link>

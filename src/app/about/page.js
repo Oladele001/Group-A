@@ -141,20 +141,24 @@ export default function About() {
                 <p className="text-blue-400 font-semibold mb-6">Founder & Chief Executive Officer</p>
                 
                 <div className="space-y-4 text-gray-300">
-                  <p>
-                    Dr. SODIQ O is a renowned medical professional with over 10 years of experience in healthcare 
-                    management and clinical practice. With a vision to make quality healthcare accessible to all, 
-                    they lead Group A Hospital with excellence and compassion.
-                  </p>
-                  <p>
-                    After completing their medical education at Ladoke Akintola University Of Technology , Dr. SODIQ O gained extensive 
-                    experience working in various hospitals across Nigeria before bringing their expertise to 
-                    healthcare leadership.
-                  </p>
-                  <p>
-                    Under their leadership, Group A Hospital provides exceptional medical care and serves as a trusted name in healthcare throughout 
-                    Osun State and beyond.
-                  </p>
+                  {/* <p> Dr. Sodiq Olaboye  </p> */}
+                 <p> Dr. Sodiq Olaboye is a distinguished physician, healthcare innovator, medical educator, and public health advocate — and the Founder & CEO of OSB Medical Services and Training Ltd, operating as Group “A” Medical.
+
+With a deep passion for medicine, education, and community transformation,
+ Dr. Olaboye has dedicated his career to building an integrated healthcare and medical training ecosystem that combines clinical excellence, professional development, public health outreach, and ethical leadership.</p>
+<b>
+He is widely recognized for:
+</b>
+<p>• Advancing accessible, quality healthcare delivery</p>
+<p>• Developing structured medical and allied health education programs</p>
+<p>• Leading public health awareness through media and community outreach</p>
+<p>• Mentoring healthcare professionals and students across disciplines.</p>
+<p>Through Group “A” Medical, Dr. Olaboye oversees multiple initiatives including medical care services, diagnostic solutions, professional training institutions, educational media platforms, and leadership development structures — all designed to raise healthcare standards and empower the next generation of practitioners.
+
+His philosophy is built on the belief that:
+“Knowledge shared saves lives, education strengthens systems, and healthcare must serve both science and society.”
+
+Beyond clinical practice, Dr. Olaboye is a strong voice for health education, preventive medicine, ethical professionalism, and community-centered care.</p>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-700">
@@ -178,8 +182,8 @@ export default function About() {
                   src="/doctor02.jpeg"
                   alt="Dr. SODIQ O"
                   width={600}
-                  height={450}
-                  className="w-full h-[450] object-cover"
+                  height={600}
+                  className="w-full h-[600] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
