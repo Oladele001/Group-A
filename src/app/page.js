@@ -112,7 +112,7 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl dark:text-gray-300">
-                Group A Hospital is committed to providing <span className="font-semibold text-blue-600 dark:text-blue-400">exceptional medical care</span> to the Apomu community and beyond. Your health and well-being are our top priorities.
+                Group A Medical Care Center is committed to providing <span className="font-semibold text-blue-600 dark:text-blue-400">exceptional medical care</span> to the Apomu community and beyond. Your health and well-being are our top priorities.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -123,10 +123,10 @@ export default function Home() {
                    Book Appointment
                 </Link>
                 <Link 
-                  href="tel:+234 9035157889"
+                  href="tel:+2349013065088"
                   className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-jakarta"
                 >
-                  Emergency: <span className="text-white">+234 9035157889</span>
+                  Emergency: <span className="text-white">+2349013065088</span>
                 </Link>
               </div>
             </div>
@@ -140,8 +140,6 @@ export default function Home() {
                   width={1000}
                   height={450}
                   className="w-full h-[450] object-cover"
-                  // loading="lazy"
-                  // sizes="(max-width: 1000px) 100vw, (max-width: 768px) 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white text-center">
@@ -161,7 +159,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 font-jakarta dark:text-white">
-              Why Choose <span className="gradient-text">Group A Hospital</span>
+              Why Choose <span className="gradient-text">Group A Medical Care Center</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed dark:text-gray-300">
               We combine <span className="font-semibold text-blue-600 dark:text-blue-400">advanced medical technology</span> with compassionate care to deliver the best healthcare experience.
@@ -297,7 +295,7 @@ export default function Home() {
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-white">Group A Hospital</p>
+                      <p className="font-semibold text-white">Group A Medical Care Center</p>
                       <p className="text-gray-300">Awala Road, Apomu</p>
                       <p className="text-gray-300">Osun State, Nigeria</p>
                     </div>
@@ -320,7 +318,7 @@ export default function Home() {
                     </svg>
                     <div>
                       <p className="font-semibold text-white">Email</p>
-                      <p className="text-gray-300">info@groupahospital.com</p>
+                      <p className="text-gray-300">groupanhc@gmail.com</p>
                     </div>
                   </div>
 

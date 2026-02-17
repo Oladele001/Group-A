@@ -36,7 +36,7 @@ export default function Header() {
                   className="w-[35] h-[35] object-contain rounded-xl"
                   />
               </div>
-              <span className="hidden sm:block text-white font-bold">Group A Hospital</span>
+              <span className="hidden sm:block text-white font-bold">Group A Medical Care Center</span>
             </Link>
           </div>
 
