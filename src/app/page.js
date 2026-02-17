@@ -135,7 +135,7 @@ export default function Home() {
             <div className="relative animate-fadeInRight">
               <div className="relative rounded-3xl  shadow-2xl card-hover">
                 <Image
-                  src="/doctor01.jpeg"
+                  src="/doctor.jpeg"
                   alt="Group A Hospital Founder"
                   width={1000}
                   height={450}
